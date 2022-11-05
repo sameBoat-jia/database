@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>温度计</title>
+</head>
+<body>
+<div>j2ee实验iot：温度计</div>
+<div id="main" style="width: 600px;height:400px;"></div>
+<button onclick="copyText()">前往j2ee实验iot：温度计=====>线状表</button>
+<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+
+    function copyText() {
+        window.location.replace("http://localhost:8080/linechart")
+    }
+    var myChart = echarts.init(document.getElementById('main'));
+    option = {
+        tooltip: {
+            formatter: "{a} <br/>{b} : {c}"
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        series: [{
+            name: '温度指标',
+            type: 'gauge',
+            min: 15,
+            max: 25,
+            splitNumber: 10, // 分割段数，默认为5
+            axisLine: { // 坐标轴线
+                lineStyle: { //
+                    width: 20
+                }
+            },
+            axisTick: { // 坐标轴小标记
+                splitNumber: 10, // 每份split细分多少段
+                length: 5, // 属性length控制线长
+                lineStyle: { // 属性lineStyle控制线条样式
+                    color: 'auto'
+                }
+            },
+            axisLabel: { // 坐标轴文本标签，详见axis.axisLabel
+                textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    color: 'auto',
+                    fontSize: 15,
+                    fontWeight: 'bolder'
+                }
+            },
+            splitLine: { // 分隔线
+                show: true, // 默认显示，属性show控制显示与否
+                length: 35, // 属性length控制线长
+                lineStyle: { // 属性lineStyle（详见lineStyle）控制线条样式
+                    color: 'auto'
+                }
+            },
+            pointer: {
+                width: 13
+            },
+            title: {
+                show: true,
+                offsetCenter: [0, '-30%'], // x, y，单位px
+                textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder'
+                }
+            },
+            detail: {
+                formatter: '{value}',
+                offsetCenter: [0, '70%'],
+                textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    color: 'auto',
+                    fontWeight: 'bolder'
+                }
+            },
+            data: [{
+                value: 15,
+                name: '温度(℃)'
+            }]
+        }]
+    };
+    myChart.setOption(option);
+    var v = 20;
+    setTimeout(setInterval(function () {
+        $.get("/now",function(result){
+            result = eval("(" + result + ")");
+            console.log(result.template);
+            option.series[0].data[0].value = result.template;  // (220 + Math.random() * 10).toFixed(1) - 0;
+            myChart.setOption(option, true);
+        });
+    }, 1000), 5000);
+</script>
+</body>
+</html>

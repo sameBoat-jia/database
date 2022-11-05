@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>柱状图</title>
+    <script type="text/javascript" th:src="@{/echarts.min.js}"></script>
+    <script type="text/javascript" th:src="@{/JQuery.js}"></script>
+</head>
+<body>
+<div id="histogram" style="width: 600px;height:400px;"></div>
+<a th:href="@{/lineChart}">折线图-温度变化曲线</a>
+<a th:href="@{/dashboard}">仪表盘-当前温度</a>
+<script type="text/javascript">
+    let temperature
+    let temperatureList
+    var chartDom = document.getElementById('histogram');
+    var myChart = echarts.init(chartDom);
+    var option;
+    var timer = window.setInterval(function () {
+        $.ajax({
+            url: 'http://localhost:8080/temp/getAverage',
+            success(res) {
+                console.log(res)
+                temperatureList = res
+            }
+        })
+        myChart.setOption({
+            series: [
+                {
+                    data: temperatureList
+                }
+            ]
+        });
+    }, 1000 * 5)
+    var timer = window.setInterval(function () {
+        temperature = (Math.random() * 10 + 15).toFixed(1)
+        $.ajax({
+            url: 'http://localhost:8080/temp/add',
+            data: {
+                temperature: temperature
+            },
+            success(res) {
+                console.log(res)
+            }
+        })
+    }, 1000 * 5)
+    option = {
+        title: {
+            text: '平均温度'
+        },
+        tooltip: {},
+        xAxis: {
+            type: 'category',
+            //data: ['-6～-5', '-5～-4', '-4～-3', '-3～-2', '-2～-1', '-1~当前']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                data: temperatureList,
+                type: 'bar'
+            }
+        ]
+    };
+    option && myChart.setOption(option);
+</script>
+</body>
+</html>

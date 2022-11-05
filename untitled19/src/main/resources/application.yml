@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3306/salary
+    username: root
+    password: z2621056241
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  max-http-header-size: 8192

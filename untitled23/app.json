@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/check/check",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "J2EE",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#628AE7",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "登录",
+      "iconPath": "/img/login.png",
+      "selectedIconPath": "/img/loginS.png"
+    },
+    {
+      "pagePath": "pages/check/check",
+      "text": "列表",
+      "iconPath": "/img/check.png",
+      "selectedIconPath": "/img/checkS.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

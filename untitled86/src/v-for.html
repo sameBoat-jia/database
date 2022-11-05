@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-for</title>
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <!--循环的是li标签，因此v-for添加在这里-->
+    <li v-for="(item,index) in arr" :title="item">
+      【{{index+1}}】{{item}}
+    </li>
+
+    <input type="button" @click="add" value="添加数据">
+    <input type="button" @click="remove" value="删除数据">
+    <h2 v-for="(item,index) in objArr">
+      我叫{{item.name}}
+    </h2>
+  </ul>
+</div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      arr: [1, 2, 3, 4, 5],
+      objArr:[
+        {name:"chocho"},
+        {name:"anchor"}
+      ]
+    },
+    methods:{
+      //增加数据
+      add: function () {
+        this.objArr.push({name:"xyg"});
+      },
+      //删除数据
+      remove: function () {
+        //默认移除第一个元素
+        this.objArr.shift();
+      }
+    }
+  })
+</script>
+</html>

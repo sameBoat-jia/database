@@ -1,0 +1,20 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">-->
+<!--    &lt;!&ndash;1导入坐标&ndash;&gt;-->
+<!--    &lt;!&ndash;    2配置bean&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean class="com.itheima.dao.impl.BookDaoImpl" id="bookDao"/>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    <bean class="com.itheima.service.impl.BookServiceImpl" id="bookService">&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash;        配置server与dao的关系&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash;        property标签表示配置当前bean的属性&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash;        name属性表示配置一哪个具体的属性，&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash;        ref属性表示参照哪一个bean&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="bookDao" ref="bookDao"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+<!--<context:component-scan base-package="com.itheima.dao.impl"/>-->
+<!--    -->
+<!--</beans>-->

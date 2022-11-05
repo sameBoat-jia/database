@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="vueapp">
+    <div id="container" style="height: 500px"></div>
+</div>
+<button onclick="copyText()">前往j2ee实验iot：温度计=====>历史表</button>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+
+<script type="text/javascript">
+    function copyText() {
+        window.location.replace("http://localhost:8080/histogram")
+    }
+    var vue = new Vue({
+        el:'#vueapp',
+        data:{
+            chart:"",
+            option : {
+                title : {
+                    text: '过去一小时气温变化'
+                },
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['气温']
+                },
+                toolbox: {
+                    show : true,
+                    feature : {
+                        mark : {show: true},
+                        dataView : {show: true, readOnly: false},
+                        magicType : {show: true, type: ['line', 'bar']},
+                        restore : {show: true},
+                        saveAsImage : {show: true}
+                    }
+                },
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data : [...Array(120)].map((_, i) => i )
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value',
+                        axisLabel : {
+                            formatter: '{value} °C'
+                        }
+                    }
+                ],
+                series : [
+                    {
+                        name:'温度',
+                        type:'line',
+                        // data:[11, 11, 15, 13, 12, 13, 10],
+                        data:[...Array(120)].map((_, i) => (Math.random()*10+15).toFixed(1) ),
+                        markPoint : {
+                            data : [
+                                {type : 'max', name: '最大值'},
+                                {type : 'min', name: '最小值'}
+                            ]
+                        },
+                        markLine : {
+                            data : [
+                                {type : 'average', name: '平均值'}
+                            ]
+                        }
+                    }
+                ]
+            }
+
+        },
+        methods: {
+            init(){
+                let dom = document.getElementById("container");
+                this.$data.chart = echarts.init(dom,'light');
+                // this.$data.option.series[0].data[0].value = 20;
+                this.$data.chart.setOption(this.$data.option, true);
+
+            }
+
+
+        },
+        mounted: function () {
+            // console.log([...Array(120)].map((_, i) => (Math.random()*10+15).toFixed(1) ))
+            let _this = this;
+            this.init()
+            this.$nextTick(function () {
+                setInterval(function () {
+                    axios.get('/linechartMesg').then(function(res){
+                        arr=res.data;
+                        // console.log(arr);
+                        for(i = 0; arr[i]!=null; i++) {
+
+                            _this.$data.option.xAxis[0].data[i] = arr[i].time;
+                            // console.log( _this.$data.option.xAxis[0].data[i]);
+                            _this.$data.option.series[0].data[i]= arr[i].template;
+                        }
+                        _this.$data.chart.setOption(_this.$data.option, true);
+                    }).catch(function(res){
+                        console.log(res);
+                    });
+                },5000)
+            });
+        }
+    });
+</script>
+</body>
+</html>

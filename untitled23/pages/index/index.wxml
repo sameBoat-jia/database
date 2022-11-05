@@ -1,0 +1,19 @@
+<view class="title">欢迎登录</view>
+<view>
+  <form>
+    <view class="formControl">
+      <text decode="true">用户名：&emsp;</text>
+      <input type="text" bindinput="getUsername" />
+    </view>
+    <view class="formControl">
+      <text>登录密码：</text>
+      <input type="password" bindinput="getPassword" />
+    </view>
+    <view class="formControl">
+      <text>确认密码：</text>
+      <input type="password" bindinput="getConfirmPassword" />
+    </view>
+    <button bindtap="login">登录</button>
+    <button form-type="reset" bindtap="reset">重置</button>
+  </form>
+</view>

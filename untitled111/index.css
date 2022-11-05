@@ -1,0 +1,39 @@
+/*上面蓝色一大片*/
+.bgTop1 {
+    background: blue;
+    width: 773px;
+    height: 83px;
+}
+
+/*第二排浅蓝色*/
+.bgtop2 {
+    background: cornflowerblue;
+    width: 773px;
+    height: 10px;
+}
+
+/*顶部三个图片距离上沿的高度*/
+.centerTop {
+    margin-border-left: 20px;
+}
+
+/*第一个图片*/
+#topPic1 {
+    margin-left: 378px;
+}
+
+/*第二个图片*/
+#topPic2 {
+    margin-left: 5px;
+}
+
+/*第三个图片*/
+#topPic3 {
+    margin-left: 6px;
+}
+/*!**!论坛入口*/
+#topP
+{
+    color: white;
+    margin-left: 105px;
+}

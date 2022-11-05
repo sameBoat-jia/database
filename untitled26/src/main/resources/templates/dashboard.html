@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>仪表盘</title>
+    <script type="text/javascript" th:src="@{/echarts.min.js}"></script>
+    <script type="text/javascript" th:src="@{/JQuery.js}"></script>
+</head>
+<body>
+<div id="dashboard" style="width: 600px;height:400px;"></div>
+<a th:href="@{/lineChart}">折线图-温度变化曲线</a>
+<a th:href="@{/histogram}">柱状图-平均温度</a>
+<script type="text/javascript">
+    let temperature
+    var timer = window.setInterval(function () {
+        temperature = (Math.random() * 10 + 15).toFixed(1)
+        myChart.setOption({
+            series: [
+                {
+                    data: [
+                        {
+                            value: temperature
+                        }
+                    ]
+                }
+            ]
+        });
+        //console.log(temperature)
+        $.ajax({
+            url: 'http://localhost:8080/temp/add',
+            data: {
+                temperature: temperature
+            },
+            success(res) {
+                console.log(res)
+            }
+        })
+    }, 1000 * 5)
+    var chartDom = document.getElementById('dashboard');
+    var myChart = echarts.init(chartDom);
+    var option;
+    option = {
+        title: {
+            text: '当前温度'
+        },
+        series: [
+            {
+                type: 'gauge',
+                center: ['50%', '60%'],
+                startAngle: 200,
+                endAngle: -20,
+                min: 0,
+                max: 60,
+                splitNumber: 12,
+                itemStyle: {
+                    color: '#00FF00'
+                },
+                progress: {
+                    show: true,
+                    width: 30
+                },
+                pointer: {
+                    show: false
+                },
+                axisLine: {
+                    lineStyle: {
+                        width: 30
+                    }
+                },
+                axisTick: {
+                    distance: -45,
+                    splitNumber: 5,
+                    lineStyle: {
+                        width: 2,
+                        color: '#999'
+                    }
+                },
+                splitLine: {
+                    distance: -52,
+                    length: 14,
+                    lineStyle: {
+                        width: 3,
+                        color: '#999'
+                    }
+                },
+                axisLabel: {
+                    distance: -20,
+                    color: '#999',
+                    fontSize: 20
+                },
+                anchor: {
+                    show: false
+                },
+                title: {
+                    show: false
+                },
+                detail: {
+                    valueAnimation: true,
+                    width: '60%',
+                    lineHeight: 40,
+                    borderRadius: 8,
+                    offsetCenter: [0, '-15%'],
+                    fontSize: 60,
+                    fontWeight: 'bolder',
+                    formatter: '{value} °C',
+                    color: 'auto'
+                },
+                data: [
+                    {
+                        value: temperature
+                    }
+                ]
+            }
+        ]
+    };
+    option && myChart.setOption(option);
+</script>
+</body>
+</html>

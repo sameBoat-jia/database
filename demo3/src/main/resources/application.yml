@@ -1,0 +1,26 @@
+## 应用名称
+#spring.application.name=demo3
+#jdbc:
+#  driverClassName: com.mysql.jdbc.Driver
+#  url: jdbc:mysql://127.0.0.1:3306/springboot_test1?serverTimezone=UTC
+#  username: root
+#  password: card1366
+spring:
+  profiles:
+    active: abc,def
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot_test1
+    username: root
+    password: card1366
+mybatis:
+  #实体类别名包路径
+  type-aliases-package: com.example.demo.pojo
+  #映射文件路径
+
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    com.example: debug
+    org.springframework: info

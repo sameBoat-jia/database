@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-text</title>
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+<!--  拼接方式-->
+  <h2 v-text="message + '@'">xyg</h2>
+  <h2 v-text="info + '@'">xyg</h2>
+  <h2>{{info + '@'}}xyg</h2>
+</div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: '秋秋要加油呀!',
+      info: '梦公主好帅鸭！'
+    }
+  })
+</script>
+</html>

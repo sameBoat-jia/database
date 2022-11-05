@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>折线图</title>
+    <script type="text/javascript" th:src="@{/echarts.min.js}"></script>
+    <script type="text/javascript" th:src="@{/JQuery.js}"></script>
+</head>
+<body>
+<div id="line" style="height:400px;"></div>
+<a th:href="@{/dashboard}">仪表盘-当前温度</a>
+<a th:href="@{/histogram}">柱状图-平均温度</a>
+<script type="text/javascript">
+    let temperature
+    let temperatureList
+    var timer = window.setInterval(function () {
+        $.ajax({
+            url: 'http://localhost:8080/temp/getAll',
+            success(res) {
+                console.log(res)
+                temperatureList = res
+            }
+        })
+        myChart.setOption({
+            series: [
+                {
+                    data: temperatureList
+                }
+            ]
+        });
+    }, 1000 * 5)
+    var timer = window.setInterval(function () {
+        temperature = (Math.random() * 10 + 15).toFixed(1)
+        $.ajax({
+            url: 'http://localhost:8080/temp/add',
+            data: {
+                temperature: temperature
+            },
+            success(res) {
+                console.log(res)
+            }
+        })
+    }, 1000 * 5)
+
+    var myChart = echarts.init(document.getElementById('line'));
+    option = {
+        title: {
+            text: '温度变化曲线'
+        },
+        xAxis: {
+            //data: ['-60', '-55', '-50', '45', '-40', '-35', '30', '-25', '-20', '-15', '-10', '-5', '0']
+            type: 'category',
+            nameLocation: 'middle'
+        },
+        yAxis: {},
+        series: [
+            {
+                data: temperatureList,
+                type: 'line',
+                label: {
+                    show: true,
+                    position: 'bottom',
+                    textStyle: {
+                        fontSize: 20
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+</body>
+</html>

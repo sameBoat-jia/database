@@ -1,0 +1,11 @@
+# 应用名称
+spring:
+application:
+name: demo1
+server:
+  port: 8088
+  address: 127.0.0.1
+  name: abc
+
+
+

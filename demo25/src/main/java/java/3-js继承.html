@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>js原型继承</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+            line-height: 28px;
+        }
+
+        .btn {
+            padding: 10px;
+        }
+
+        .out {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: darkgrey;
+        }
+
+        .in1 {
+            width: 165px;
+            box-sizing: border-box;
+            border: solid 2px black;
+            margin: 5px;
+            float: left;
+        }
+
+        .in1 label {
+            display: inline-block;
+            width: 65px;
+            margin-left: 10px;
+
+            line-height: 28px;
+        }
+
+        .in1 input {
+            width: 66px;
+            margin-top: 4px;
+        }
+
+        .in1 div {
+            background-color: antiquewhite;
+            width: 100%;
+            height: 32px;
+        }
+
+        .in1 div.oper {
+            text-align: center;
+            background-color: rgb(255, 236, 178);
+        }
+
+        .in1 div.header {
+            background-color: rgb(109, 174, 255);
+        }
+
+        .method {
+            background-color: rgb(202, 209, 255) !important;
+            border-top: solid black 0.5px;
+        }
+
+        .method label {
+            width: 130px;
+        }
+
+        #propDialog,
+        #methodDialog {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        #propDialog>div,
+        #methodDialog>div {
+            width: 120px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            z-index: 100;
+
+        }
+
+        #propDialog input[type=text],
+        #methodDialog input[type=text] {
+            width: 50px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <div style="clear: both;"></div>
+        <div class="in1">
+            <div class="header">
+                <label class="name">对象1</label>
+            </div>
+            <div class="oper">
+                <input type="button" value="+子对象" class="add1">
+            </div>
+            <div class="oper">
+                <input type="button" value="+属性" class="add2">
+                <input type="button" value="+方法" class="add3">
+            </div>
+            <div><label>__proto__</label><label>Object</label></div>
+            <div><label>name</label><label>张三</label></div>
+            <div><label>age</label><label>18</label></div>
+        </div>
+
+        <div id="propDialog">
+            <div>
+                <div><label></label></div>
+                <div><label>属性名</label><input type="text" id="propName"></div>
+                <div><label>属性值</label><input type="text" id="propValue"></div>
+                <div><input type="button" value="添加" id="propBtn"></div>
+            </div>
+        </div>
+
+        <div id="methodDialog">
+            <div>
+                <div><label></label></div>
+                <div><label>方法名</label><input type="text" id="methodName"></div>
+                <div><input type="button" value="添加" id="methodBtn"></div>
+            </div>
+        </div>
+    </div>
+
+    <template id="t1">
+        <div class="in1 instance">
+            <div class="header">
+                <label class="name">对象1</label>
+            </div>
+            <div class="oper">
+                <input type="button" value="+子对象" class="add1">
+            </div>
+            <div class="oper">
+                <input type="button" value="+属性" class="add2">
+                <input type="button" value="+方法" class="add3">
+            </div>
+            <div><label>__proto__</label><label class="super">Object</label></div>
+        </div>
+    </template>
+    <script>
+        let count = 2;
+        let current = null;
+        const propDialog = document.getElementById("propDialog");
+        const methodDialog = document.getElementById("methodDialog");
+        document.body.addEventListener("click", e => {
+            const div = e.target.parentNode.parentNode;
+            if (e.target.className == "add1") {
+                const name = div.querySelector(".name").textContent;
+                let t = document.getElementById("t1");
+                t.content.querySelector(".name").textContent = "对象" + count++;
+                t.content.querySelector(".super").textContent = name;
+                const c = document.importNode(t.content, true);
+                document.querySelector(".out").appendChild(c);
+            } else if (e.target.className == "add2") {
+                propDialog.querySelector("label").textContent = `${name}添加属性`;
+                propDialog.style.display = "block";
+                current = div;
+            } else if (e.target.className == "add3") {
+                methodDialog.querySelector("label").textContent = `${name}添加方法`;
+                methodDialog.style.display = "block";
+                current = div;
+            }
+        });
+
+        document.getElementById("propBtn").onclick = () => {
+            const name = document.getElementById("propName").value;
+            const value = document.getElementById("propValue").value;
+            const html = `<div><label>${name}</label><label>${value}</label></div>`
+            if (current) {
+                current.innerHTML += html;
+            }
+            document.getElementById("propName").value = "";
+            document.getElementById("propValue").value = "";
+            propDialog.style.display = "none";
+        }
+
+        document.getElementById("methodBtn").onclick = () => {
+            const name = document.getElementById("methodName").value;
+            const html = `<div class='method'><label>${name}() { ... }</label></div>`
+            if (current) {
+                current.innerHTML += html;
+            }
+            document.getElementById("methodName").value = "";
+            methodDialog.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

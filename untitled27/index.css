@@ -1,0 +1,163 @@
+.bgTop1 {
+    background: rgb(33, 71, 143);
+    width: 776px;
+    height: 80px;
+}
+
+.bgTop2 {
+    background: rgb(94, 154, 211);
+    width: 776px;
+    height: 6px;
+}
+
+.centerTop {
+    margin-block: 16px;
+}
+
+#topPic1 {
+    margin-left: 365px;
+}
+
+#topPic2 {
+    margin-left: 7px;
+}
+
+#topPic3 {
+    margin-left: 4px;
+}
+
+#topP {
+    color: white;
+    margin-left: 105px;
+}
+
+.bgLeft {
+    background: rgb(94, 154, 211);
+    width: 30px;
+    height: 290px;
+    margin-left: 50px;
+}
+
+.conLeft {
+    margin-left: -25px;
+    padding-top: 36px;
+}
+
+.inLeft {
+    padding-block: 1px;
+}
+
+.botLeft {
+    margin-left: 25px;
+    margin-top: 4px;
+    border: 2px solid rgb(94, 154, 211);
+}
+
+.flex {
+    display: flex;
+}
+
+.all {
+    width: 380px;
+}
+
+#news {
+    margin-top: 130px;
+    margin-left: 40px;
+}
+
+.newsLine {
+    background: rgb(115, 115, 115);
+    width: 280px;
+    height: 2px;
+    margin-top: 142px;
+    margin-left: 0px;
+}
+
+.fine {
+    width: 280px;
+    height: 20px;
+    margin-left: 90px;
+    margin-block: 2px;
+}
+
+#newsPic {
+    background: rgb(241, 241, 241);
+    padding-block: 6px;
+    padding-inline: 16px;
+    margin-left: 40px;
+    border: 2px solid rgb(129, 150, 222);
+}
+
+#newsIntro {
+    padding-right: 130px;
+    border: 2px solid rgb(129, 150, 222);
+}
+
+#newsH {
+    margin: 0;
+    color: rgb(141, 91, 140);
+}
+
+#tranPic {
+    margin-top: 115px;
+}
+
+#tranBor {
+    width: 140px;
+    height: 250px;
+    border: 1px solid rgb(126, 126, 126);
+}
+
+#cutLine {
+    background: rgb(191, 199, 217);
+    width: 1px;
+    height: 400px;
+}
+
+#bgIn {
+    background-image: url("/image/五线谱.gif");
+    margin-top: 16px;
+    width: 126px;
+    height: 20px;
+}
+
+#in {
+    margin: 0;
+    margin-left: 45px;
+    color: rgb(141, 91, 140);
+}
+
+#borIn {
+    margin-inline: 2px;
+    margin-block: 10px;
+    width: 122px;
+    height: 86px;
+    border: 1px solid rgb(204, 204, 251);
+}
+
+#service {
+    margin-top: 25px;
+    margin-inline: 2px;
+    width: 122px;
+    height: 235px;
+    border: 1px solid rgb(211, 208, 201);
+}
+
+#inSer {
+    height: 30px;
+    width: 100%;
+    background: rgb(232, 232, 253);
+}
+
+#serviceH {
+    margin: 0;
+    text-align: center;
+    padding-top: 8px;
+}
+
+#bottom {
+    width: 776px;
+    margin-top: 4px;
+    border: 0.5px solid rgb(128, 128, 128);
+}

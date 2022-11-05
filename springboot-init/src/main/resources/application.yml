@@ -1,0 +1,18 @@
+#server:
+#  port: 8888
+name: abc
+#对象
+person:
+  name: ${name}
+  age: 20
+#  对象的行内写法
+person2: { name: zhangsan,age: 20 }
+
+#数组
+address:
+  - beijing
+  - shanghai
+address2: [ beijing,shanghai ]
+#纯量
+msg1: 'hello\nword'
+msg2: "hello\nword"

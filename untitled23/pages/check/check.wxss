@@ -1,0 +1,36 @@
+.title {
+    margin-top: 50rpx;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.table {
+    margin-top: 30rpx;
+    border: 1px solid #dadada;
+    border-right: 0;
+    border-bottom: 0;
+    width: 98%;
+    margin-left: 1%;
+}
+
+.tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.th,
+.td {
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+}
+
+.th {
+    font-weight: 800;
+    font-size: 15px;
+    color: #330e0e;
+}

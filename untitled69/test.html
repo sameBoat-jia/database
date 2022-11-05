@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsTest</title>
+</head>
+<body>
+<h1>我的第一个页面</h1>
+<p id="demo">我的第一个段落</p>
+<!--<button onclick="myFunction()">点我</button>-->
+<script>
+    // window.alert(5+6);
+    // document.getElementById("demo").innerHTML="段落已修改";
+    // document.write(Date());
+    //
+    // function myFunction() {
+    //     document.write(Date());
+    // }
+    // var text='{"employees":}'
+    //     var text = '{"employees":[' +
+    //         '{"firstName":"John","lastName":"Doe" },' +
+    //         '{"firstName":"Anna","lastName":"Smith" },' +
+    //         '{"firstName":"Peter","lastName":"Jones" }]}';
+    //     var text= '{"employees": [{"firstName": "john", "lastName": "doe"},{"firstName": "Anna", "lastName": "Smith"},{"firstName": "peter", "lastName": "Jones"}]}';
+    var text = '{"employees":[{"firstName":"Jone","lastName":"Doe"},{"firstName":"Anna","lastName":"Smith"},{"firstName":"peter","lastName":"JONES"}]}';
+    obj = JSON.parse(text);
+    document.getElementById("demo").innerHTML =
+        obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+
+</script>
+</body>
+</html>

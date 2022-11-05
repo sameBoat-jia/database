@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div id="container" style="height: 500px"></div>
+</div>
+<button onclick="copyText()">回到j2ee实验iot：温度计=====>温度计</button>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    function copyText() {
+        window.location.replace("http://localhost:8080/index")
+    }
+    var vue = new Vue({
+        el:'#app',
+        data:{
+            chart:"",
+            option : {
+                title : {
+                    text: '最近1小时内每10分钟的平均温度',
+                    subtext: ''
+                },
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['平均温度']
+                },
+                toolbox: {
+                    show : true,
+                    feature : {
+                        mark : {show: true},
+                        dataView : {show: true, readOnly: false},
+                        magicType : {show: true, type: ['line', 'bar']},
+                        restore : {show: true},
+                        saveAsImage : {show: true}
+                    }
+                },
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        data : ['10','20','30','40','50','60']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value'
+                    }
+                ],
+                series : [
+                    {
+                        name:'10分钟的平均温度',
+                        type:'bar',
+                        data: [...Array(6)].map((_, i) => (Math.random()*10+3).toFixed(1) ),
+                        markPoint : {
+                            data : [
+                                {type : 'max', name: '最大值'},
+                                {type : 'min', name: '最小值'}
+                            ]
+                        },
+                        markLine : {
+                            data : [
+                                {type : 'average', name: '平均值'}
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        methods: {
+            init(){
+                let _this = this;
+
+                let dom = document.getElementById("container");
+                this.$data.chart = echarts.init(dom,"light");
+                this.$data.chart.setOption(this.$data.option, true);
+            }
+        },
+        mounted: function () {//初始化echarts,必须div初vue创建完成后执行,否则会出错
+            console.log(this.$data.option)
+            // 匿名函数直接用this报错
+            let _this = this;
+            _this.init()
+            this.$nextTick(function () {
+                setInterval(function () {
+                    axios.get('/histogramMesg').then(function(res){
+                        res = eval("(" + res + ")");
+                        arr=res.data;
+                        // console.log(arr);
+                        for(i = 0; arr[i]!=null; i++) {
+                            _this.$data.option.series[0].data[i] = arr[i].time;
+                        }
+                        _this.$data.chart.setOption(_this.$data.option, true);
+                    }).catch(function(res){
+                        console.log(res);
+                    });
+                },60*10*1000)
+            });
+        }
+    });
+</script>
+</html>

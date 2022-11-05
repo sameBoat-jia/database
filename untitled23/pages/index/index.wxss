@@ -1,0 +1,25 @@
+.formControl{
+  display: flex;
+  margin: 20rpx;
+}
+
+input{
+  border: 1px solid gray;
+  border-radius: 30rpx;
+}
+
+.title{
+  margin-top: 50rpx;
+  text-align: center;
+  font-size: xx-large;
+}
+
+form{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  margin: 20rpx;
+}

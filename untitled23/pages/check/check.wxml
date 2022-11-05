@@ -1,0 +1,12 @@
+<view class="title">登录列表</view>
+
+<view class="table">
+    <view class="tr">
+        <view class="th th1">用户名</view>
+        <view class="th th2">登录密码</view>
+    </view>
+    <view class="tr" wx:for="{{user}}" wx:key="index">
+        <view class="td td1">{{item.username}}</view>
+        <view class="td td2">{{item.password}}</view>
+    </view>
+</view>

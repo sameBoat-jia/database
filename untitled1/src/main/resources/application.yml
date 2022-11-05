@@ -1,0 +1,26 @@
+#spring:
+#  mvc:
+#    view:
+#      prefix: /abc
+#      suffix: .jsp
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3306/test
+#    username: root
+#    password: XJjxR46t
+#    driver-class-name: com.mysql.jdbc.Driver
+#server:
+#  error:
+#    path: /abc/error.jsp
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:myaql://127.0.0.1:3306/springboot_test1
+  username: root
+  password: card1366
+
+  spring:
+    profiles:
+      actice: abc,def
+
+#tomcat端口修改
+#server:
+#  port: 8088

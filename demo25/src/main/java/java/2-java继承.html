@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>java类继承</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size:14px;
+            line-height: 28px;
+        }
+
+        .btn {
+            padding: 10px;
+        }
+
+        .out {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background-color:darkgrey;
+        }
+
+        .in1 {
+            width: 165px;
+            box-sizing: border-box;
+            border: solid 2px black;
+            margin: 5px;
+            float: left;
+        }
+        .in1 label {
+            display: inline-block;
+            width: 80px;
+            margin-left: 10px;            
+        }
+        .in1 input[type=text] {
+            width: 50px;     
+            margin-top: 5px;       
+        }
+        .in1 div.member {
+            background-color: antiquewhite;
+            width: 100%;
+            height: 32px;
+        }
+
+        .in1 .oper, .in2 .oper {
+            background-color: rgb(255, 190, 150);
+            border-bottom: solid black 0.5px;
+        }
+
+        .in2 .oper label{
+            width: 160px;
+        }
+        
+
+        .in2 {
+            width: 165px;
+            box-sizing: border-box;
+            border: solid 2px black;
+            margin: 5px;
+            float: left;
+            
+        }
+        .in2 label {
+            display: inline-block;
+            width: 80px;
+            margin-left: 10px;
+        }
+        .in2 input[type=text] {
+            width: 50px;
+            margin-top: 5px;
+        }
+        .in2 div.member {
+            background-color: antiquewhite;
+            width: 100%;
+            height: 32px;
+        }
+        .in2 div.member.extend {
+            background-color: rgb(220, 253, 170);
+            border-top: solid black 0.5px;
+        }
+
+        .method {            
+            background-color: rgb(202, 209, 255) !important;
+            border-top: solid black 0.5px;
+        }
+        .method label{
+            width: 130px;
+        }
+
+        
+
+        .instance div.header{
+            background-color: rgb(255, 236, 178);
+            height: 32px;
+            border-bottom: solid black 0.5px;
+        }
+        .instance {
+            width: 165px;
+            text-align: center;
+        }
+        .instance label {
+            width: 130px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <div>
+            <div class="in1">
+                <div class="oper"><label>class Father</label></div>
+                <div class="member"><label>String name</label> <input type="text"></div>
+                <div class="member"><label>int age</label> <input type="text"></div>
+                <div class="member method"><label>void method1(){ ... }</label></div>
+            </div>
+
+            <div class="in2">
+                <div class="oper"><label>class Son extends Father</label></div>
+                <div class="member extend"><label>String sex</label> <input type="text"></div>
+                <div class="member method"><label>void method2(){ ... }</label></div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="btn">
+            <input type="button" value="new Person()" id="add1">
+            <input type="button" value="new Son()" id="add2">
+        </div>
+        
+    </div>
+    <template id="t1">
+        <div class="in1 instance">
+            <div class="header"><label>Markword</label></div>
+            <div class="header"><label>类指针 = Father</label></div>
+            <div class="member"><input type="text"></div>
+            <div class="member"><input type="text"></div>
+        </div>
+    </template>
+    <template id="t2">
+        <div class="in2 instance">
+            <div class="header"><label>Markword</label></div>
+            <div class="header"><label>类指针 = Son</label></div>
+            <div class="member"><input type="text"></div>
+            <div class="member"><input type="text"></div>
+            <div class="member extend"><input type="text"></div>
+        </div>
+    </template>
+    <script> 
+        document.getElementById("add1").onclick = () => {
+            let t = document.getElementById("t1");
+            let inputs = t.content.querySelectorAll("input");
+            inputs[0].value = randomGenerator("abcdefghijklmnopqrstuvwxyz", 5);
+            inputs[1].value = randomGenerator("1234567890", 2);
+            const c = document.importNode(t.content, true);
+            document.querySelector(".out").appendChild(c);
+        }
+        document.getElementById("add2").onclick = () => {
+            let t = document.getElementById("t2");
+            let inputs = t.content.querySelectorAll("input");
+            inputs[0].value = randomGenerator("abcdefghijklmnopqrstuvwxyz", 5);
+            inputs[1].value = randomGenerator("1234567890", 2);
+            inputs[2].value = randomGenerator("男女", 1);
+            const c = document.importNode(t.content, true);
+            document.querySelector(".out").appendChild(c);
+        }
+        function randomGenerator(str, n) {
+            const result = [];
+            for (let i = 0; i < n; i++) {
+                result.push(str.charAt(Math.floor(Math.random() * str.length)))
+            }
+            return result.join("");
+        }
+    </script>
+</body>
+
+</html>

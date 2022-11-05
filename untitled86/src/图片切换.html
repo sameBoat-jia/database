@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>图片切换</title>
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <div class="center">
+    <h2 class="title">梦公主</h2>
+    <!--左箭头-->
+    <span @click="prev" v-show="index!=0"> < </span>
+    <!--图片-->
+    <img :src="imgArr[index]" alt="" style="width: 200px">
+    <!--右箭头-->
+    <span @click="next" v-show="index<imgArr.length-1"> > </span>
+  </div>
+</div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      imgArr: [
+        "./img/梦.png",
+        "./img/梦1.png",
+        "./img/梦2.png",
+        "./img/梦3.png",
+        "./img/梦4.png",
+        "./img/梦公子.png"
+      ],
+      index: 0
+    },
+    methods:{
+      //上一张
+      prev: function () {
+        this.index--;
+        //console.log(this.index);
+      },
+      //下一张
+      next: function () {
+        this.index++;
+        //console.log(this.index);
+      }
+    }
+  })
+</script>
+</html>

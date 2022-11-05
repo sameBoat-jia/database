@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>data数据对象</title>
+</head>
+<body>
+<!--//简单对象-->
+<!--{{变量名}}-->
+<!--复杂对象-->
+<!--{{对象名.变量名}}-->
+<!--数组-->
+<!--{{数组名[下标]}}-->
+<div id="app">
+  {{message}}
+  <h2>{{school.name}} {{school.mobile}}</h2>
+  <ul>
+    <li>{{compu[0]}}</li>
+    <li>{{compu[1]}}</li>
+    <li>{{compu[2]}}</li>
+    <li>{{compu[3]}}</li>
+  </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data:{
+      message: '秋秋要加油呀！',
+      //对象
+      school:{
+        name: "chocho",
+        mobile: '123456'
+      },
+      //数组
+      //数组的名字可以自己定义
+      compu:['航空港', '龙泉', '人南', '青羊']
+    }
+  })
+</script>
+</body>
+</html>

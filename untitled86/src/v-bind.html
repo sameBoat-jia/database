@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>v-bind</title>
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <style>
+    /*设置样式*/
+    .active{
+      border: 1px solid purple;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <img v-bind:src="imgSrc" alt="" style="width: 200px">
+  <!--v-bind:简写为:-->
+  <img :src="imgSrc" alt="" style="width: 200px" :title="imgTitle" :class="{active:isActive}" @click="toggleActive">
+</div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      imgSrc: './img/梦公子.png',
+      imgTitle: '梦公子',
+      isActive: false
+    },
+    methods:{
+      toggleActive: function () {
+        this.isActive = !this.isActive;
+      }
+    }
+  })
+</script>
+</html>

@@ -1,0 +1,10 @@
+# 应用名称
+spring:
+    application:
+        name: demo2
+    datasource:
+        url: jdbc:mysql://127.0.0.1:3306/springboot_db?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        driverClassName: com.mysql.jdbc.Driver
+        username: root
+        password: root
+        type: com.alibaba.druid.pool.DruidDataSource

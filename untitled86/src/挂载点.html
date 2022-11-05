@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>el挂载点</title>
+</head>
+<body>
+{{message}}
+<div class="app">
+  {{message}}
+  <span>
+            {{message}}
+        </span>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  var app = new Vue({
+    // el: '#app',
+    el: '.app',
+    data: {
+      message: '秋秋要加油呀'
+    }
+  })
+</script>
+</html>
+<!--el挂载点-->
+<!--作用范围-->
+<!--data作用域范围在el挂载点命中标签的内部。-->
+<!--选择器-->
+<!--可以使用选择器，但是推荐id选择器。-->
+<!--支持标签-->
+<!--除了body、html以外，所有的双标签都支持挂载。-->
