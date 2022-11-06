@@ -19,15 +19,15 @@ public class BookServiceTest {
     @Autowired
     private BookService bookService;
 
-    @Autowired
-    private BookDao bookDao;
-
-    @Test
-    public void test()
-    {
-        Book book=bookDao.getById(1);
-        System.out.println(book);
-    }
+//    @Autowired
+//    private BookDao bookDao;
+//
+//    @Test
+//    public void test()
+//    {
+//        Book book=bookDao.getById(1);
+//        System.out.println(book);
+//    }
     @Test
     public void testGetById()
     {
