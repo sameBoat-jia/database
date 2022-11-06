@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="reggie_take_out_:war">
+    <output-path>$PROJECT_DIR$/reggie_take_out_/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>reggie_take_out_</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="reggie_take_out_-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="reggie_take_out_:war exploded" />
+    </root>
+  </artifact>
+</component>

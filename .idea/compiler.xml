@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo3" />
+        <module name="test-2" />
+        <module name="fp (4)" />
+        <module name="demo4" />
+        <module name="demo25" />
+        <module name="demo5" />
+        <module name="demo24" />
+        <module name="untitled72" />
+        <module name="demo6" />
+        <module name="demo23" />
+        <module name="untitled73" />
+        <module name="demo7" />
+        <module name="demo22" />
+        <module name="fp (8)" />
+        <module name="untitled130" />
+        <module name="demo8" />
+        <module name="demo21" />
+        <module name="demo9" />
+        <module name="demo20" />
+        <module name="untitled76" />
+        <module name="untitled77" />
+        <module name="untitled38" />
+        <module name="reggie_take_out" />
+        <module name="demo29" />
+        <module name="test-2 (1)" />
+        <module name="demo28" />
+        <module name="demo27" />
+        <module name="test-3" />
+        <module name="j2ee" />
+        <module name="untitled81" />
+        <module name="untitled82" />
+        <module name="demo1" />
+        <module name="demo2" />
+        <module name="untitled80" />
+        <module name="demo15" />
+        <module name="untitled41" />
+        <module name="demo14" />
+        <module name="fp (5)" />
+        <module name="untitled42" />
+        <module name="untitled100" />
+        <module name="demo13" />
+        <module name="demo12" />
+        <module name="untitled40" />
+        <module name="demo11" />
+        <module name="demo10" />
+        <module name="fp (9)" />
+        <module name="untitled43" />
+        <module name="spring_01_quickstart" />
+        <module name="demo19" />
+        <module name="test-2 (2)" />
+        <module name="demo18" />
+        <module name="fp (1)" />
+        <module name="demo17" />
+        <module name="demo16" />
+        <module name="untitled109" />
+        <module name="untitled108" />
+        <module name="untitled104" />
+        <module name="untitled107" />
+        <module name="untitled91" />
+        <module name="untitled106" />
+        <module name="J2EE2" />
+        <module name="untitled112" />
+        <module name="fp (6)" />
+        <module name="untitled114" />
+        <module name="untitled113" />
+        <module name="untitled98" />
+        <module name="untitled99" />
+        <module name="untitled16" />
+        <module name="untitled17" />
+        <module name="fp" />
+        <module name="demo" />
+        <module name="fp (2)" />
+        <module name="test-2 (3)" />
+        <module name="reggie_take_out_" />
+        <module name="J2EE2 (1)" />
+        <module name="untitled104 (1)" />
+        <module name="untitled63" />
+        <module name="untitled64" />
+        <module name="untitled61" />
+        <module name="fp (7)" />
+        <module name="untitled62" />
+        <module name="untitled23" />
+        <module name="untitled67" />
+        <module name="demo31" />
+        <module name="untitled65" />
+        <module name="demo30" />
+        <module name="untitled120" />
+        <module name="untitled9" />
+        <module name="untitled28" />
+        <module name="fp (3)" />
+        <module name="untitled2" />
+        <module name="springboot-init" />
+        <module name="untitled127" />
+        <module name="untitled71" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.5" />
+      <module name="demo1" target="1.5" />
+      <module name="demo10" target="1.5" />
+      <module name="demo11" target="1.5" />
+      <module name="demo12" target="1.5" />
+      <module name="demo13" target="1.5" />
+      <module name="demo14" target="1.5" />
+      <module name="demo15" target="1.5" />
+      <module name="demo16" target="1.5" />
+      <module name="demo17" target="1.5" />
+      <module name="demo18" target="1.5" />
+      <module name="demo19" target="1.5" />
+      <module name="demo2" target="1.5" />
+      <module name="demo20" target="1.5" />
+      <module name="demo21" target="1.5" />
+      <module name="demo22" target="1.5" />
+      <module name="demo23" target="1.5" />
+      <module name="demo24" target="1.5" />
+      <module name="demo25" target="1.5" />
+      <module name="demo27" target="1.5" />
+      <module name="demo28" target="1.5" />
+      <module name="demo29" target="1.5" />
+      <module name="demo3" target="1.5" />
+      <module name="demo30" target="1.5" />
+      <module name="demo31" target="1.5" />
+      <module name="demo4" target="1.5" />
+      <module name="demo5" target="1.5" />
+      <module name="demo6" target="1.5" />
+      <module name="demo7" target="1.5" />
+      <module name="demo8" target="1.5" />
+      <module name="demo9" target="1.5" />
+      <module name="fp" target="1.7" />
+      <module name="fp (1)" target="1.7" />
+      <module name="fp (2)" target="1.7" />
+      <module name="fp (3)" target="1.7" />
+      <module name="fp (4)" target="1.7" />
+      <module name="fp (5)" target="1.7" />
+      <module name="fp (6)" target="1.7" />
+      <module name="fp (7)" target="1.7" />
+      <module name="fp (8)" target="1.7" />
+      <module name="fp (9)" target="1.7" />
+      <module name="j2ee" target="1.5" />
+      <module name="J2EE2" target="1.5" />
+      <module name="J2EE2 (1)" target="1.5" />
+      <module name="reggie_take_out" target="1.5" />
+      <module name="reggie_take_out_" target="1.5" />
+      <module name="spring_01_quickstart" target="1.5" />
+      <module name="springboot-init" target="1.5" />
+      <module name="test-2" target="1.5" />
+      <module name="test-2 (1)" target="1.5" />
+      <module name="test-2 (2)" target="1.5" />
+      <module name="test-2 (3)" target="1.5" />
+      <module name="test-3" target="1.5" />
+      <module name="untitled100" target="1.5" />
+      <module name="untitled102" target="1.5" />
+      <module name="untitled104" target="1.5" />
+      <module name="untitled104 (1)" target="1.5" />
+      <module name="untitled106" target="1.5" />
+      <module name="untitled107" target="1.5" />
+      <module name="untitled108" target="1.5" />
+      <module name="untitled109" target="1.5" />
+      <module name="untitled112" target="1.5" />
+      <module name="untitled113" target="1.5" />
+      <module name="untitled114" target="1.5" />
+      <module name="untitled120" target="1.5" />
+      <module name="untitled127" target="1.5" />
+      <module name="untitled130" target="1.5" />
+      <module name="untitled16" target="1.8" />
+      <module name="untitled17" target="1.8" />
+      <module name="untitled2" target="1.8" />
+      <module name="untitled23" target="1.8" />
+      <module name="untitled28" target="1.8" />
+      <module name="untitled38" target="1.8" />
+      <module name="untitled40" target="1.8" />
+      <module name="untitled41" target="1.5" />
+      <module name="untitled42" target="1.5" />
+      <module name="untitled43" target="1.5" />
+      <module name="untitled61" target="1.5" />
+      <module name="untitled62" target="1.8" />
+      <module name="untitled63" target="1.5" />
+      <module name="untitled64" target="1.5" />
+      <module name="untitled65" target="1.5" />
+      <module name="untitled67" target="1.5" />
+      <module name="untitled71" target="1.5" />
+      <module name="untitled72" target="1.5" />
+      <module name="untitled73" target="1.5" />
+      <module name="untitled76" target="1.5" />
+      <module name="untitled77" target="1.5" />
+      <module name="untitled80" target="1.5" />
+      <module name="untitled81" target="1.5" />
+      <module name="untitled82" target="1.5" />
+      <module name="untitled9" target="1.8" />
+      <module name="untitled91" target="1.8" />
+      <module name="untitled98" target="1.8" />
+      <module name="untitled99" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

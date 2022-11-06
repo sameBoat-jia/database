@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="untitled80:war">
+    <output-path>$PROJECT_DIR$/untitled80/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>untitled80</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="untitled80.war">
+      <element id="artifact" artifact-name="untitled80:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/reggie_take_out_" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled1" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled10" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled100" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled104" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled105" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled106" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled107" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled108" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled109" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled112" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled113" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled114" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled120" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled127" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled13" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled130" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled14" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled15" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled20" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled35" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled36" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled42" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled43" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled44" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled46" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled48" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled5" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled57" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled60" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled64" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled65" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled67" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled71" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled72" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled73" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled76" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled77" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled80" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled81" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled82" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled99" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/demo2/pom.xml" />
+        <option value="$PROJECT_DIR$/demo3/pom.xml" />
+        <option value="$PROJECT_DIR$/demo4/pom.xml" />
+        <option value="$PROJECT_DIR$/demo5/pom.xml" />
+        <option value="$PROJECT_DIR$/demo6/pom.xml" />
+        <option value="$PROJECT_DIR$/demo7/pom.xml" />
+        <option value="$PROJECT_DIR$/demo8/pom.xml" />
+        <option value="$PROJECT_DIR$/demo9/pom.xml" />
+        <option value="$PROJECT_DIR$/demo10/pom.xml" />
+        <option value="$PROJECT_DIR$/demo11/pom.xml" />
+        <option value="$PROJECT_DIR$/demo12/pom.xml" />
+        <option value="$PROJECT_DIR$/demo13/pom.xml" />
+        <option value="$PROJECT_DIR$/demo14/pom.xml" />
+        <option value="$PROJECT_DIR$/demo15/pom.xml" />
+        <option value="$PROJECT_DIR$/demo16/pom.xml" />
+        <option value="$PROJECT_DIR$/demo17/pom.xml" />
+        <option value="$PROJECT_DIR$/demo18/pom.xml" />
+        <option value="$PROJECT_DIR$/demo19/pom.xml" />
+        <option value="$PROJECT_DIR$/demo20/pom.xml" />
+        <option value="$PROJECT_DIR$/demo21/pom.xml" />
+        <option value="$PROJECT_DIR$/demo22/pom.xml" />
+        <option value="$PROJECT_DIR$/demo23/pom.xml" />
+        <option value="$PROJECT_DIR$/demo24/pom.xml" />
+        <option value="$PROJECT_DIR$/demo25/pom.xml" />
+        <option value="$PROJECT_DIR$/demo27/pom.xml" />
+        <option value="$PROJECT_DIR$/demo28/pom.xml" />
+        <option value="$PROJECT_DIR$/demo29/pom.xml" />
+        <option value="$PROJECT_DIR$/demo30/pom.xml" />
+        <option value="$PROJECT_DIR$/demo31/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled1/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled2/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled5/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled8/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled9/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled10/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled13/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled14/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled15/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled16/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled17/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled19/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled20/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled23/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled26/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled28/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled35/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled36/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled38/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled40/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled41/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled42/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled43/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled44/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled46/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled48/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled57/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled60/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled61/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled62/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled63/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled64/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled65/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled66/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled67/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled71/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled72/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled73/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled76/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled77/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled80/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled81/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled82/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled91/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled98/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled99/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled100/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled102/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled104/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled105/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled106/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled107/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled108/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled109/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled112/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled113/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled114/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled120/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled127/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled130/pom.xml" />
+        <option value="$PROJECT_DIR$/reggie_take_out/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-init/pom.xml" />
+        <option value="$PROJECT_DIR$/reggie_take_out_/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_01_quickstart/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="openjdk-19" project-jdk-type="JavaSDK" />
+</project>
