@@ -14,7 +14,7 @@ public class TemperatureServiceImpl implements TemperatureService {
 
     @Autowired
     private TemperatureDao temperatureDao;
-    @Override
+
     public List<Temperature> getAll() {
         return temperatureDao.getAll();
     }

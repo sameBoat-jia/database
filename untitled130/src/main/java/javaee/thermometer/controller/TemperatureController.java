@@ -15,7 +15,7 @@ public class TemperatureController {
     @Autowired
     private TemperatureService temperatureService;
     @GetMapping
-    @CrossOrigin("http://localhost:5173")
+//    @CrossOrigin("http://localhost:5173")
     public void get()
     {
         temperatureService.getAll();
